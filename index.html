@@ -106,7 +106,6 @@ ball = {
 	vel: null,
 	/*Modify the size of the ball*/
 	side:  10,
-	
   /*Modify the speed of ball here*/
 	speed: 5,
 	/**
@@ -155,19 +154,6 @@ ball = {
 		ctx.fillRect(this.x, this.y, this.side, this.side);
 	},	
 },
-score = {
-	x: WIDTH/4,
-	y: HEIGHT/5,
-	update: function() {
-		score.fillStyle = "WHITE";
-		score.font = "75px";
-	},
-	draw: function() {
-		score.fillText(user.score, x, y,);
-		score.fillText(ai.score, x, y,);
-	}
-};
-
 /**
  * Starts the game
  */
@@ -239,13 +225,6 @@ function draw() {
 }
 // start and run the game
 main();
-$(document).ready(function() {
-  var btn = $(".button");
-  btn.click(function() {
-    btn.toggleClass("paused");
-    return false;
-  });
-});
 </script>
 </body>
 </html>
