@@ -7,7 +7,7 @@
 	<div class="player">
 <!-- Create a button to let the user start the ball -->
 <input type="button" id="startBallBtn" value="Start Ball"
-	onclick="startBall();">
+	onClick="main();">
 <!-- Create a button to let the user stop the ball -->    
 <input type="button" id="stopBallBtn" value="Stop Ball"
 	onClick="stopBall();" disabled>
@@ -163,7 +163,9 @@ score = {
 		score.fillText(ai.score, x, y,);
 	}
 };
-
+/*Create a function  that will use if/else conditions and a variable representing playing (false/true)*/
+/*If in play you can use paddle/ball*/
+/*
 /**
  * Starts the game
  */
