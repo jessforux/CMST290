@@ -1,5 +1,6 @@
 <h1># CMST290</h1> <br>
 <h2>Project 1: Ping Pong</h2><br>
+<img src="https://thumbs.gfycat.com/MintyHardHammerkop-small.gif" />
 <p>Submission Requirements</p><br>
 <ol>Please complete the following changes:
   <li>✔ Modify the speed of the ball.</li> 
