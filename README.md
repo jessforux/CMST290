@@ -22,7 +22,7 @@ MILESTONE 3 3: ---<br>
 <p>References: <a href="https://www.udemy.com/user/christopherleedeleon/"> Christopher DeLeon </a></p>
 
 <h2>Project 1: Portfolio</h2><br>
-<p>Submission Requirements<p><br>
+<p>Submission Requirements</p><br>
 <ol>Please complete the following changes:
   <li>Change the color of the header from hexidecimal purple (9933cc).</li>
   <li>Add your first and last name to the header.</li>
@@ -44,4 +44,4 @@ MILESTONE 3 3: ---<br>
 MILESTONE 1: ---<br>
 MILESTONE 2: ---<br>
 MILESTONE 3 3: ---<br>
-<p>References: <a href="https://www.udemy.com/user/christopherleedeleon/"> Christopher DeLeon </a></p>
+<p>References: N/A</p>
