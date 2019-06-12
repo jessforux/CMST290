@@ -76,7 +76,7 @@
         if(showWinScreen == true) {
             return; 
         }
-        computerMovement();
+       // computerMovement();
         
         ballX += ballSpeedX;
         ballY += ballSpeedY;
@@ -122,14 +122,20 @@
     function drawEverything() {
         // next line blanks out the screen with black
         colorRect(0,0,canvas.width,canvas.height,'black');
+        canvasContext.font = "30px Helvetica";
         if(showWinScreen) {
-            canvasContext.fillStyle = 'white';
+            
             if(play1Score >= WINNING_SCORE) {
-                canvasContext.fillText("Left Player Won!", 350, 200);
+                canvasContext.fillStyle = 'red';
+                canvasContext.fillText("Left Player Won!", 300, 250);
+                canvasContext.fillStyle = 'white';
+                canvasContext.fillText('Click to continue', 300,500);
             } else if(play2Score >= WINNING_SCORE) {
-                canvasContext.fillText("Right Player Won!", 350, 200);
+                canvasContext.fillStyle = 'blue';
+                canvasContext.fillText("Right Player Won!", 300, 250);
+                canvasContext.fillStyle = 'white';
+                canvasContext.fillText('Click to continue', 300,500);
             }
-            canvasContext.fillText('Click to continue', 350,500);
             return; 
         }
         // next line draws the net 
