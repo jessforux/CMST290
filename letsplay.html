@@ -44,13 +44,17 @@ function drawEverything() {
    
 
     /*Order is important to create over layers = layer effect*/
-    canvasContext.fillStyle = 'black';
-    canvasContext.fillRect(0,0,canvas.width,canvas.height);
+
     canvasContext.fillStyle = 'blue';
     canvasContext.fillRect(0, 210, 10, 100);
     canvasContext.fillStyle = 'white';
     /*Use mathematics to determine more even measurement results*/
     canvasContext.fillRect(ballX, 100, 10, 10);
+}
+
+function colorRect(leftX, topY, width, height, drawColor) {
+    canvasContext.fillStyle = drawColor;
+    canvasContext.fillRect(leftX, topY, width, height);
 }
 </script>
 
