@@ -39,6 +39,6 @@ Please complete the following changes:
   <li>Create an additional aside box on the right side of the page to include one or more call out quotes about you (e.g. "Works very hard!" --Former Boss)</li>
 MILESTONE 1: ---<br>
 MILESTONE 2: ---<br>
-MILESTONE 3 3: ---<br>
+MILESTONE 3: ---<br>
 <p>References: N/A</p>
 </ol>
