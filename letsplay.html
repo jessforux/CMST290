@@ -1,35 +1,38 @@
 <html>
-Jess, is here. 
-<!--Modify Canvas Height and Width-->
+    <head></head>
+    <body>Let's Play, here!
 
+<!--Modify Canvas Height and Width-->
 <canvas id="gameCanvas" width="800" height ="600"></canvas>
 
 <script>
 /*Constant Variable*/
-var canvas;
-var canvasContext;
-var ballX = 50;
-/*Modify the ball speed*/
-var ballSpeedX = 10;
+    var canvas;
+    var canvasContext;
+    var ballX = 50;
+    var ballY = 50;
+//Modify the ball speed
+    var ballSpeedX = 10;
+    var ballSpeedY = 4;
 
-/*Wait for it to load and then and run*/
 window.onload = function() {
-    
     canvas = document.getElementById('gameCanvas');
     canvasContext = canvas.getContext('2d');
-    /*100ms = 10nth of a Second*/
+
+    //100ms = 10nth of a Second
     var framesPerSecond = 30;
-    /*Writing the function using the inline form*/
+    //Writing the function using the inline form//
     setInterval(function() {
         moveEverything();
         drawEverything();
     }, 1000/framesPerSecond);
-    /*Temporary Local Variable*/
+    //Temporary Local Variable
 }
 
-    /*Camel-spacing*/
 function moveEverything() {
     ballX = ballX + ballSpeedX;
+    ballY = ballY + ballSpeedY;
+   
     if(ballX < 0) {
         ballSpeedX = -ballSpeedX;
     }
@@ -38,25 +41,43 @@ function moveEverything() {
        ballSpeedX = -ballSpeedX;
      
     }
+    if(ballY < 0) {
+        ballSpeedY = -ballSpeedY;
+    }
+    if(ballY > canvas.width) {
+       /*Get if == statement refernece*/
+       ballSpeedY = -ballSpeedY;
+     
+    }
 } 
 function drawEverything() {
-    /*= equals to 'overrides to the left'*/
-   
+    //Order is important to create over layers = layer effect
+    
+    //Next line blanks out the screen with black
+    colorRect(0, 0, canvas.width, canvas.height, 'black');
+    
+    //Next line left player paddle
+    colorRect(0, 210, 10, 100, 'white');
 
-    /*Order is important to create over layers = layer effect*/
-
-    canvasContext.fillStyle = 'blue';
-    canvasContext.fillRect(0, 210, 10, 100);
-    canvasContext.fillStyle = 'white';
-    /*Use mathematics to determine more even measurement results*/
-    canvasContext.fillRect(ballX, 100, 10, 10);
+    //Next line draws the ball
+    colorCircle(ballX, ballY, 10, 'white');
 }
 
-function colorRect(leftX, topY, width, height, drawColor) {
+//Helper Functions
+
+function colorCircle(centerX, centerY, radius, drawColor) {
+    canvasContext.fillStyle = drawColor;
+    canvasContext.beginPath();
+    //Next line (x, y)[center of the circle], radius, (angles,rad)
+    canvasContext.arc(centerX, centerY, radius, 0,Math.PI*2,true);
+    canvasContent.fill();
+}
+
+function colorRect(leftX, topY, width,height, drawColor) {
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(leftX, topY, width, height);
 }
 </script>
 
-</html>
+</body> </html>
     
