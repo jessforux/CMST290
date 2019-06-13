@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
@@ -18,11 +19,43 @@
 html {
     font-family: "Lucida Sans", sans-serif;
 }
-/*Change the background-color*/
+/*Change the background-color from #99933cc*/
 .header {
-    background-color: #9933cc;
-    color: #ffffff;
-    padding: 15px;
+    background-color #fff;
+    color: black;
+    padding: 30px;
+    font-size: 0.5rem;
+    display: flex;
+}
+#headerIcon {
+    justify-content:flex-end;
+    padding-left: 20rem;
+}
+
+.userOption {
+    font-size: 14px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.userOption .select {
+    width: 120%;
+}
+
+.userOption .select select{
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 120%;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
 }
 /*Change the padding of the navigation menu*/
 .menu ul {
@@ -31,14 +64,14 @@ html {
     padding: 0;
 }
 .menu li {
-    padding: 8px;
-    margin-bottom: 7px;
+    padding: 24px 20px 20px 20px;
     background-color :#33b5e5;
     color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
 }
 .menu li:hover {
     background-color: #0099cc;
+    border-radius: 
 }
 /*Change the font size of the text in the aside box*/
 .aside {
@@ -85,6 +118,7 @@ html {
 <!--Add first and last name to the header-->
 <!--Add a responsive image-->
 <h1>Jessica Hoang</h1>
+<img id="headerIcon"src="img/Group 3.svg"/>
 </div>
 <!--Change the navigation to the section you would find on a resume-->
 <!--6 to 8 sections-->
@@ -104,8 +138,17 @@ html {
 </div>
 <div class="col-6">
 <section id="About Me"></section>
-<h1>About Me</h1>
-<p>Lorem ipsum about me lorem ipsum</p>
+<h1>To design is to define problems and execute solutions.</h1>
+<p>I have served the 
+    <select class="userOption">
+        <option value="a">customers</option>
+        <option value="b">clients</option>
+        <option value="c">stakeholders</option>
+        <option value="d" class="select">people</option>
+    </select>
+    for 7+ years. <br>
+    
+</p>
 </div>
 <div class="col-3 right">
 <!--Add at least three degrees in the aside box on the right side-->
@@ -126,4 +169,8 @@ html {
 <p>References available upon <a href="#">request</a></p>
 </div>
 </body>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d01d052b64fa919"></script>
+
 </html>
