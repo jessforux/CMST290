@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+        <script src="https://use.fontawesome.com/32c1965958.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
@@ -58,6 +58,9 @@ html {
     font-size: 1em;
 }
 /*Change the padding of the navigation menu*/
+.mobileNav {
+    display: none;
+}
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -111,25 +114,39 @@ html {
         width: 100%;
     /*Goal: Create a horizontal icon-based navigation bar for mobile*/
     }
-    .mobileMenu ul {
-    list-style-type: none;
-    overflow: hidden;
+    .nav {
+        display:none;
     }
-
-    .mobileMenu li a{
+    .mobileNav {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        display: inline;
+        width: 400px;
+    }
+    .mobileNav li {
+        display: block;
+        width: 100px;
+        float: left;
+        padding: 10px;
+    }
+    .mobileNav a {
+        width: 100px;
         background:#33b5e5;
         color: #ffffff;
-        display: inline-block;
-        padding: 10px;
-        text-align: center;
+        display: block;
+        text-decoration: none;
+        padding: 20px 10px 20px 10px;
+        height: 70px;
     }
     
-    .mobileMenu li a:hover {
+    .mobileNav li a:hover {
     background-color: #000;
-    border-radius: 
     }
 }
 </style>
+
 </head>
 <body>
 <div class="header">
@@ -141,10 +158,19 @@ html {
 <!--Change the navigation to the section you would find on a resume-->
 <!--6 to 8 sections-->
 <!--Add a short career objective-->
-
+<ul class="mobileNav">
+        <!--About Me add under image -->
+        <li><a href=""><i class="fas fa-female"></i></a></li>
+        <!--Case Study -->
+        <li> <a href=""><i class="far fa-folder"></i></a></li>
+        <!--Give Back-->
+        <li><a href=""><img src="img/Heart.svg"/></a></li>
+        <!--Connect-->
+        <li><a href=""><img src="img/Messages.svg"/></a></li>
+        </ul>
 <div class="row">
 <div class="col-3 menu">
-<ul style="display:none;">
+<ul class="nav">
 <li>About Me</li>
 <li>Work Experience</li>
 <li>Skills & Languages</li>
@@ -153,16 +179,7 @@ html {
 <li>Give Back</li>
 <li>Contact Me</li>
 </ul>
-<ul class="mobileMenu">
-    <!--About Me add under image-->
-    <li><a href=""><img src="img/Profile.svg"/></a></li>
-    <!--Case Study-->
-    <li> <a href=""><img src="img/Path 833.svg"/></a></li>
-    <!--Give Back-->
-    <li><a href=""><img src="img/Heart.svg"/></a></li>
-    <!--Connect-->
-    <li><a href=""><img src="img/Messages.svg"/></a></li>
-    </ul>
+
 </div>
 <div class="col-6">
 <section id="About Me"></section>
@@ -203,5 +220,6 @@ html {
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d01d052b64fa919"></script>
+
 
 </html>
