@@ -109,6 +109,24 @@ html {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
+    /*Goal: Create a horizontal icon-based navigation bar for mobile*/
+    }
+    .mobileMenu ul {
+    list-style-type: none;
+    overflow: hidden;
+    }
+
+    .mobileMenu li a{
+        background:#33b5e5;
+        color: #ffffff;
+        display: inline-block;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .mobileMenu li a:hover {
+    background-color: #000;
+    border-radius: 
     }
 }
 </style>
@@ -126,7 +144,7 @@ html {
 
 <div class="row">
 <div class="col-3 menu">
-<ul>
+<ul style="display:none;">
 <li>About Me</li>
 <li>Work Experience</li>
 <li>Skills & Languages</li>
@@ -135,6 +153,16 @@ html {
 <li>Give Back</li>
 <li>Contact Me</li>
 </ul>
+<ul class="mobileMenu">
+    <!--About Me add under image-->
+    <li><a href=""><img src="img/Profile.svg"/></a></li>
+    <!--Case Study-->
+    <li> <a href=""><img src="img/Path 833.svg"/></a></li>
+    <!--Give Back-->
+    <li><a href=""><img src="img/Heart.svg"/></a></li>
+    <!--Connect-->
+    <li><a href=""><img src="img/Messages.svg"/></a></li>
+    </ul>
 </div>
 <div class="col-6">
 <section id="About Me"></section>
@@ -169,6 +197,9 @@ html {
 <p>References available upon <a href="#">request</a></p>
 </div>
 </body>
+<script>
+    //Create a code that will use if/else conditions to define different menu for mobile and desktop
+</script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d01d052b64fa919"></script>
