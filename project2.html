@@ -91,6 +91,28 @@ html {
     font-size: 12px;
     padding: 15px;
 }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 90vh;
+    width: 90%;
+    margin-top: 400px;
+}
+.cell {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+.cell-1 {
+    background:#33b5e5; 
+}
+.cell-2 {
+    background:#33b5e5; 
+}
+.cell-3 {
+    background:#33b5e5; 
+}
 /* For desktop: */
 /*Change the breakpoint for the desktop version by at least 10 pixels in either direction*/
 /*Add a Media Query to set an initial background color and change it to a different color when it reaches the desktop breakpoint*/
@@ -122,22 +144,20 @@ html {
         text-align: center;
         list-style: none;
         display: inline;
-        width: 400px;
     }
     .mobileNav li {
         display: block;
-        width: 100px;
         float: left;
-        padding: 10px;
+        width: 25%
     }
     .mobileNav a {
-        width: 100px;
+        width: 100%;
         background:#33b5e5;
         color: #fff;
         display: block;
         text-decoration: none;
-        padding: 20px 10px 20px 10px;
-        height: 70px;
+        padding: 20px;
+        margin: 0;
     }
     
     .mobileNav li a:hover {
@@ -145,8 +165,8 @@ html {
     color: #33b5e5;
     }
     
-    .fa {
-        font-size: 100px;
+    .aside {
+        display: none;
     }
 }
 </style>
@@ -162,16 +182,19 @@ html {
 <!--Change the navigation to the section you would find on a resume-->
 <!--6 to 8 sections-->
 <!--Add a short career objective-->
+<div style="width:100%; text-align:center;">
 <ul class="mobileNav">
         <!--About Me add under image -->
-        <li><a href=""><i class="fa fa-female fa-2x"></i></a></li>
+        <li><a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a></li>
         <!--Case Study -->
-        <li> <a href=""><i class="fa fa-folder fa-2x"></i></a></li>
+        <li> <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a></li>
         <!--Give Back-->
         <li><a href=""><i class="fa fa-heart fa-2x"></i></i></a></li>
         <!--Connect-->
         <li><a href=""><i class="fa fa-comments fa-2x"></i></a></li>
-        </ul>
+</ul>
+</div>
+
 <div class="row">
 <div class="col-3 menu">
 <ul class="nav">
@@ -186,7 +209,7 @@ html {
 
 </div>
 <div class="col-6">
-<section id="About Me"></section>
+<section id="aboutMe">
 <h1>To design is to define problems and execute solutions.</h1>
 <p>I have served the 
     <select class="userOption">
@@ -196,8 +219,22 @@ html {
         <option value="d" class="select">people</option>
     </select>
     for 7+ years. <br>
-    
 </p>
+</section>
+
+<section id="caseStudy"> 
+<div class="container">
+    <div class="cell cell-1">1.</div>
+    <div class="cell cell-2">2.</div>
+    <div class="cell cell-3">3.</div>
+    <div class="cell cell-4">4.</div>
+    <div class="cell cell-5">5.</div>
+    <div class="cell cell-6">6.</div>
+    <div class="cell cell-7">7.</div>
+    <div class="cell cell-8">8.</div>
+    <div class="cell cell-9">9.</div> 
+</div>
+</section>
 </div>
 <div class="col-3 right">
 <!--Add at least three degrees in the aside box on the right side-->
