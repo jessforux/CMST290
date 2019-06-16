@@ -148,31 +148,28 @@ html {
     .nav {
         display:none;
     }
-    .mobileNav {
+    #mobileNav {
         margin: 0;
         padding: 0;
         text-align: center;
         list-style: none;
         display: inline;
         overflow: hidden;
-    }
-    .mobileNav li {
-        display: block;
-        float: left;
-        width: 25%
-    }
-    .mobileNav li a:hover {
-    background-color: #fff;
-    color: #33b5e5;
-    }
-    .mobileNav a {
         width: 100%;
+    }
+
+    #mobileNav a {
+        width: 25%;
         background:#33b5e5;
         color: #fff;
+        float: left;
         display: block;
-        text-decoration: none;
         padding: 20px;
-        margin: 0;
+        text-decoration: none;
+    }
+    #mobileNav a:hover {
+    background-color: #fff;
+    color: #33b5e5;
     }
     .sticky {
         position: fixed;
@@ -212,17 +209,17 @@ html {
 <!--Change the navigation to the section you would find on a resume-->
 <!--6 to 8 sections-->
 <!--Add a short career objective-->
-<div style="width:100%; text-align:center;">
-<ul class="mobileNav" id="mobileNav">
+<div style="width:100%; text-align:center;" id="mobileNav">
+
         <!--About Me add under image -->
-        <li><a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a></li>
+        <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
         <!--Case Study -->
-        <li> <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a></li>
+        <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a>
         <!--Give Back-->
-        <li><a href=""><i class="fa fa-heart fa-2x"></i></i></a></li>
+        <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
         <!--Connect-->
-        <li><a href=""><i class="fa fa-comments fa-2x"></i></a></li>
-</ul>
+        <a href=""><i class="fa fa-comments fa-2x"></i></a>
+
 </div>
 <!--Desktop NavBar-->
 <div class="row">
