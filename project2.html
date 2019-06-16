@@ -30,34 +30,8 @@ html {
     justify-content:flex-end;
     padding-left: 20rem;
 }
-
-.userOption {
-    font-size: 20px;
-    padding: 10px 8px 10px 14px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-}
-
-.userOption .select {
-    width: 120%;
-}
-
-.userOption .select select{
-    background: transparent;
-    line-height: 1;
-    border: 0;
-    padding: 0;
-    border-radius: 0;
-    width: 120%;
-    position: relative;
-    z-index: 10;
-    font-size: 1em;
-}
 /*Change the padding of the navigation menu*/
-.mobileNav {
+#mobileNav {
     display: none;
 }
 .menu ul {
@@ -84,12 +58,8 @@ html {
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-.footer {
-    background-color: #0099cc;
-    color: #ffffff;
-    text-align: center;
-    font-size: 12px;
-    padding: 15px;
+section {
+    font-size: 150%;
 }
 .container {
     display: grid;
@@ -114,9 +84,38 @@ html {
 .cell-3 {
     background:#33b5e5; 
 }
-#aboutMe {
-    font-size: 150%;
-}
+
+.button {
+        background-color:#33b5e5;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 40px;
+        margin: 4px 2px;
+        transition-duration: 0.6s;
+        cursor: pointer;
+        
+    }
+    .button1 {
+        background-color: #fff;
+        color: #000;
+        border: 2px solid #33b5e5;
+    }
+    .button1:hover {
+        background-color: #33b5e5;
+        color: #fff;
+    }
+    .footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    }
 /* For desktop: */
 /*Change the breakpoint for the desktop version by at least 10 pixels in either direction*/
 /*Add a Media Query to set an initial background color and change it to a different color when it reaches the desktop breakpoint*/
@@ -133,7 +132,7 @@ html {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 758px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
@@ -182,7 +181,6 @@ html {
     .aside {
         display: none;
     }
-
     .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -195,6 +193,33 @@ html {
     section {
         margin: 0 20px 250px 20px;
     }
+/*
+.userOption {
+    font-size: 20px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.userOption .select {
+    width: 120%;
+}
+
+.userOption .select select{
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 120%;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
+}
+*/
 }
 </style>
 <script src="https://use.fontawesome.com/32c1965958.js"></script>
@@ -202,44 +227,44 @@ html {
 <body>
 <div class="header">
 <!--Add first and last name to the header-->
-<!--Add a responsive image-->
 <h1>Jessica Hoang</h1>
+<!--Add a responsive image-->
 <img id="headerIcon"src="img/Group 3.svg"/>
 </div>
-<!--Change the navigation to the section you would find on a resume-->
-<!--6 to 8 sections-->
+
+
 <!--Add a short career objective-->
+<!--Mobile NavBar-->
 <div style="width:100%; text-align:center;" id="mobileNav">
-
-        <!--About Me add under image -->
-        <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
-        <!--Case Study -->
-        <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a>
-        <!--Give Back-->
-        <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
-        <!--Connect-->
-        <a href=""><i class="fa fa-comments fa-2x"></i></a>
-
+    <!--About Me add under image -->
+    <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
+    <!--Case Study -->
+    <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a>
+    <!--Give Back-->
+    <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
+     <!--Connect-->
+    <a href=""><i class="fa fa-comments fa-2x"></i></a>
 </div>
 <!--Desktop NavBar-->
+<!--6 to 8 sections-->
 <div class="row">
-<div class="col-3 menu">
-<ul class="nav">
-<li>About Me</li>
-<li>Work Experience</li>
-<li>Skills & Languages</li>
-<li>Case Study</li>
-<li>Awards</li>
-<li>Give Back</li>
-<li>Contact Me</li>
+    <div class="col-3 menu">
+        <ul class="nav">
+        <li>About Me</li>
+        <li>Case Study</li>
+        <li>Skills & Languages</li>
+        <li>Give Back</li>
+        <li>Find Me</li>
+        <li>Connect</li>
 </ul>
 
 </div>
-<div class="col-6">
-<section id="aboutMe">
 
-<h2 style="line-height:1.5; letter-spacing:-1pt;">To design is to slay problems with a slice of solution.</h2>
-<h1 style="line-height:1;">Nice to meet you, I'm Jess!<br></h1><br>
+<div class="col-6">
+    <section id="aboutMe">
+
+    <h2 style="line-height:1.5; letter-spacing:-1pt;">To design is to slay problems with a slice of solution.</h2>
+    <h1 style="line-height:1;">Nice to meet you, I'm Jess!<br></h1><br>
 
 <!--Removed Concept: Drop Down Menu
 <div class="timeline">
@@ -255,46 +280,54 @@ html {
                 <p>Lorem ipsum</p>
             </div>
         </div>
-</div>
--->
+</div>-->
 
-</section>
-
-<section id="caseStudy"> 
-<!--I serve visual stories using people-focused research
-    I build code-based content using accessible interfaces-->
-<div style="width:100%;">
-<div class="container">
-    <div class="cell cell-1">1.</div>
-    <div class="cell cell-2">2.</div>
-    <div class="cell cell-3">3.</div>
-    <div class="cell cell-1">4.</div>
-    <div class="cell cell-2">5.</div>
-    <div class="cell cell-3">6.</div>
-</div>
-</div>
-</section>
-
-<section id="giveBack">
-    <div>
+    </section>
+    <section id="caseStudy"> 
+    <!--I serve visual stories using people-focused research
+        I build code-based content using accessible interfaces-->
+        <div style="width:100%;">
+        <div class="container">
+            <div class="cell cell-1">1.</div>
+            <div class="cell cell-2">2.</div>
+            <div class="cell cell-3">3.</div>
+            <div class="cell cell-1">4.</div>
+            <div class="cell cell-2">5.</div>
+            <div class="cell cell-3">6.</div>
+        </div>
+        </div>
+    </section>
+    <section id="giveBack">
+        <div>
         <div class="container">
             <div class="cell cell-1">7.</div>
             <div class="cell cell-2">8.</div>
             <div class="cell cell-3">9.</div> 
         </div>
-    </div>
-</section>
+        </div>
+    </section>
+    <section id="connectMe">
+        <div style="width:100%; text-align:center;">
+        <a href="mailto:jessofux@gmail.com">
+            <button class="button button1">Let's Connect</button>
+        </a>
+        </div>
+    </section>
 </div>
+
 <div class="col-3 right">
 <!--Add at least three degrees in the aside box on the right side-->
 <!--Include high school to fill in the area if you have less than 2 degrees-->
 <div class="aside">
 <h2>Bachelor of Science: Psychology</h2>
 <p>University of Maryland, University College</p>
-<h2>Diploma</h2>
-<p>John F. Kennedy High School</p>
+
 <h2>User Experience</h2>
 <p>General Assembly</p>
+
+<h2>Diploma</h2>
+<p>John F. Kennedy High School</p>
+
 </div>
 </div>
 </div>
