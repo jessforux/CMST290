@@ -32,7 +32,7 @@ html {
 }
 
 .userOption {
-    font-size: 14px;
+    font-size: 28px;
     padding: 10px 8px 10px 14px;
     background: #fff;
     border: 1px solid #ccc;
@@ -95,9 +95,10 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 90vh;
+    grid-gap: 5px 5px;
+    height: 70vh;
     width: 90%;
-    margin-top: 400px;
+    margin: 250px 10px 0px 20px;
 }
 .cell {
     color: white;
@@ -112,6 +113,9 @@ html {
 }
 .cell-3 {
     background:#33b5e5; 
+}
+#aboutMe {
+    font-size: 150%;
 }
 /* For desktop: */
 /*Change the breakpoint for the desktop version by at least 10 pixels in either direction*/
@@ -135,6 +139,7 @@ html {
         width: 100%;
     /*Goal: Create a horizontal icon-based navigation bar for mobile*/
     }
+    
     .nav {
         display:none;
     }
@@ -168,6 +173,21 @@ html {
     .aside {
         display: none;
     }
+
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5px 2.5px;
+    height: 70vh;
+    width: 90%;
+    margin: 250px 10px 0px 10px;
+    }
+    section {
+        margin: 0 20px 0 20px;
+    }
+
+
 }
 </style>
 <script src="https://use.fontawesome.com/32c1965958.js"></script>
@@ -210,8 +230,8 @@ html {
 </div>
 <div class="col-6">
 <section id="aboutMe">
-<h1>To design is to define problems and execute solutions.</h1>
-<p>I have served the 
+<h1>To design is to slay problems with a slice of Solution.</h1>
+<p>I have served  
     <select class="userOption">
         <option value="a">customers</option>
         <option value="b">clients</option>
@@ -223,17 +243,27 @@ html {
 </section>
 
 <section id="caseStudy"> 
+    
+<div style="width:100%; text-align:center;">
 <div class="container">
     <div class="cell cell-1">1.</div>
     <div class="cell cell-2">2.</div>
     <div class="cell cell-3">3.</div>
-    <div class="cell cell-4">4.</div>
-    <div class="cell cell-5">5.</div>
-    <div class="cell cell-6">6.</div>
-    <div class="cell cell-7">7.</div>
-    <div class="cell cell-8">8.</div>
-    <div class="cell cell-9">9.</div> 
+    <div class="cell cell-1">4.</div>
+    <div class="cell cell-2">5.</div>
+    <div class="cell cell-3">6.</div>
 </div>
+</div>
+</section>
+
+<section id="giveBack">
+    <div>
+        <div class="container">
+            <div class="cell cell-1">7.</div>
+            <div class="cell cell-2">8.</div>
+            <div class="cell cell-3">9.</div> 
+        </div>
+    </div>
 </section>
 </div>
 <div class="col-3 right">
