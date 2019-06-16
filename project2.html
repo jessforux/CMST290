@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <script src="https://use.fontawesome.com/32c1965958.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
@@ -33,7 +32,7 @@ html {
 }
 
 .userOption {
-    font-size: 14px;
+    font-size: 20px;
     padding: 10px 8px 10px 14px;
     background: #fff;
     border: 1px solid #ccc;
@@ -92,6 +91,32 @@ html {
     font-size: 12px;
     padding: 15px;
 }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px 5px;
+    height: 70vh;
+    width: 90%;
+    margin: 10px 10px 0px 20px;
+}
+.cell {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+.cell-1 {
+    background:#33b5e5; 
+}
+.cell-2 {
+    background:#33b5e5; 
+}
+.cell-3 {
+    background:#33b5e5; 
+}
+#aboutMe {
+    font-size: 150%;
+}
 /* For desktop: */
 /*Change the breakpoint for the desktop version by at least 10 pixels in either direction*/
 /*Add a Media Query to set an initial background color and change it to a different color when it reaches the desktop breakpoint*/
@@ -114,39 +139,65 @@ html {
         width: 100%;
     /*Goal: Create a horizontal icon-based navigation bar for mobile*/
     }
+    body {
+        font-size: 80%;
+    }
+    #headerIcon {
+    padding-left: 15rem;
+    }
     .nav {
         display:none;
     }
-    .mobileNav {
+    #mobileNav {
         margin: 0;
         padding: 0;
         text-align: center;
         list-style: none;
         display: inline;
-        width: 400px;
+        overflow: hidden;
+        width: 100%;
     }
-    .mobileNav li {
-        display: block;
-        width: 100px;
-        float: left;
-        padding: 10px;
-    }
-    .mobileNav a {
-        width: 100px;
+
+    #mobileNav a {
+        width: 25%;
         background:#33b5e5;
-        color: #ffffff;
+        color: #fff;
+        float: left;
         display: block;
+        padding: 20px;
         text-decoration: none;
-        padding: 20px 10px 20px 10px;
-        height: 70px;
     }
-    
-    .mobileNav li a:hover {
-    background-color: #000;
+    #mobileNav a:hover {
+    background-color: #fff;
+    color: #33b5e5;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+   .sticky + section  {
+        padding-top: 60px;
+    }
+    .aside {
+        display: none;
+    }
+
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5px 2.5px;
+    height: 70vh;
+    width: 90%;
+    margin: 20px 10px 0px 10px;
+    }
+    section {
+        margin: 0 20px 250px 20px;
     }
 }
 </style>
-
+<script src="https://use.fontawesome.com/32c1965958.js"></script>
 </head>
 <body>
 <div class="header">
@@ -158,16 +209,19 @@ html {
 <!--Change the navigation to the section you would find on a resume-->
 <!--6 to 8 sections-->
 <!--Add a short career objective-->
-<ul class="mobileNav">
+<div style="width:100%; text-align:center;" id="mobileNav">
+
         <!--About Me add under image -->
-        <li><a href=""><i class="fas fa-female"></i></a></li>
+        <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
         <!--Case Study -->
-        <li> <a href=""><i class="far fa-folder"></i></a></li>
+        <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a>
         <!--Give Back-->
-        <li><a href=""><img src="img/Heart.svg"/></a></li>
+        <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
         <!--Connect-->
-        <li><a href=""><img src="img/Messages.svg"/></a></li>
-        </ul>
+        <a href=""><i class="fa fa-comments fa-2x"></i></a>
+
+</div>
+<!--Desktop NavBar-->
 <div class="row">
 <div class="col-3 menu">
 <ul class="nav">
@@ -182,18 +236,54 @@ html {
 
 </div>
 <div class="col-6">
-<section id="About Me"></section>
-<h1>To design is to define problems and execute solutions.</h1>
-<p>I have served the 
-    <select class="userOption">
-        <option value="a">customers</option>
-        <option value="b">clients</option>
-        <option value="c">stakeholders</option>
-        <option value="d" class="select">people</option>
-    </select>
-    for 7+ years. <br>
-    
-</p>
+<section id="aboutMe">
+
+<h2 style="line-height:1.5; letter-spacing:-1pt;">To design is to slay problems with a slice of solution.</h2>
+<h1 style="line-height:1;">Nice to meet you, I'm Jess!<br></h1><br>
+
+<!--Removed Concept: Drop Down Menu
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <h2>2019</h2>
+            <p>Lorem ipsum</p>
+        </div>
+    </div>
+    <div class="container right">
+            <div class="content">
+                <h2>2019</h2>
+                <p>Lorem ipsum</p>
+            </div>
+        </div>
+</div>
+-->
+
+</section>
+
+<section id="caseStudy"> 
+<!--I serve visual stories using people-focused research
+    I build code-based content using accessible interfaces-->
+<div style="width:100%;">
+<div class="container">
+    <div class="cell cell-1">1.</div>
+    <div class="cell cell-2">2.</div>
+    <div class="cell cell-3">3.</div>
+    <div class="cell cell-1">4.</div>
+    <div class="cell cell-2">5.</div>
+    <div class="cell cell-3">6.</div>
+</div>
+</div>
+</section>
+
+<section id="giveBack">
+    <div>
+        <div class="container">
+            <div class="cell cell-1">7.</div>
+            <div class="cell cell-2">8.</div>
+            <div class="cell cell-3">9.</div> 
+        </div>
+    </div>
+</section>
 </div>
 <div class="col-3 right">
 <!--Add at least three degrees in the aside box on the right side-->
@@ -216,6 +306,23 @@ html {
 </body>
 <script>
     //Create a code that will use if/else conditions to define different menu for mobile and desktop
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var mobileNav = document.getElementById("mobileNav");
+
+    // Get the offset position of the navbar
+    var sticky = mobileNav.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        mobileNav.classList.add("sticky")
+        } else {
+        mobileNav.classList.remove("sticky");
+  }
+}
 </script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
