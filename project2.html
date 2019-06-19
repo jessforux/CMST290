@@ -58,13 +58,36 @@ html {
 }
 /*Change the font size of the text in the aside box*/
 .aside {
-    background-color: #33b5e5;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 11px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    float: left;
+    background-color: #f1f1f1;
+    height: 30px;
+    width: 70px;
 }
+.aside button {
+    display: block;
+    background-color: inherit;
+    color: #000;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.aside button:hover {
+    background-color: #ddd;
+}
+.asideContent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 350px;
+ 
+}
+
 .asideLeft {
     float: left;
     background-color: #33b5e5;
@@ -128,6 +151,8 @@ section {
         background-color: #33b5e5;
         color: #fff;
     }
+
+  
     .footer {
     background-color: #0099cc;
     color: #ffffff;
@@ -341,6 +366,20 @@ section {
 <!--Add at least three degrees in the aside box on the right side-->
 <!--Include high school to fill in the area if you have less than 2 degrees-->
 <div class="aside">
+    <button class="asideLinks" onclick="openEducation(event, 'education')">
+        <i class="fa fa-graduation-cap fa-2x"></i></button>
+</div>
+<div id="edu" class="asideContent">
+    <h3>UMUC</h3>
+    <p>Bachelors of Science</p>
+    <h3>freeCodeCamp</h3>
+    <p>Responsive Visual Design</p>
+    <h3>General Assembly</h3>
+    <p>User Experience</p>
+</div>
+</div>
+<!--Reference to Vertical Tab-->
+<!--<div class="aside">
 <h2>Bachelor of Science: Psychology</h2>
 <p>University of Maryland, University College</p>
 
@@ -353,9 +392,9 @@ section {
 
 
 </div>
-</div>
+</div>-->
 <!--Create an additional aside box on the right size of the page to include one or more call out quotes about you-->
-<div class="footer">
+<div class="footer col-11">
 <!--Change the footer to "References available upon request"-->
 <p>References available upon <a href="#">request</a></p>
 </div>
@@ -378,9 +417,19 @@ section {
         } else {
         mobileNav.classList.remove("sticky");
   }
-}
-</script>
+}   
 
+//Add aside content to be hidden until clicked
+    function openEducation(evt, educationName) {
+    // Declare all variables
+    var i, asideContent, asideLinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    asideContent = document.getElementsByClassName("asideContent");
+        for (i = 0; i < asideContent.length; i++) {
+            asideContent[i].style.display = "none";
+        }
+    document.getElementById("defaultOpen").click();
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d01d052b64fa919"></script>
 
