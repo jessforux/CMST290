@@ -59,10 +59,9 @@ html {
 /*Change the font size of the text in the aside box*/
 .aside {
     float: left;
-    border: 1px solid #ccc;
     background-color: #f1f1f1;
-    height: 350px;
-    width: 30%;
+    height: 30px;
+    width: 70px;
 }
 .aside button {
     display: block;
@@ -83,10 +82,9 @@ html {
     float: left;
     padding: 0px 12px;
     border: 1px solid #ccc;
-    width: 50%;
+    width: 70%;
     border-left: none;
     height: 350px;
-    display: none;
  
 }
 
@@ -368,24 +366,17 @@ section {
 <!--Add at least three degrees in the aside box on the right side-->
 <!--Include high school to fill in the area if you have less than 2 degrees-->
 <div class="aside">
-    <button class="asideLinks" onclick="openClass(event,'UMUC')">
-    UMUC</button>
-    <button class="asideLinks" onclick="openClass(event,'GA')">
-    General Assembly</button>
-    <button class="asideLinks" onclick="openClass(event,'FCC')">
-    freeCodeCamp</button>
+    <button class="asideLinks" onclick="openEducation(event, 'education')">
+        <i class="fa fa-graduation-cap fa-2x"></i></button>
 </div>
-<div id="UMUC" class="asideContent">
+<div id="edu" class="asideContent">
     <h3>UMUC</h3>
     <p>Bachelors of Science</p>
-</div>
-<div id="GA" class="asideContent">
+    <h3>freeCodeCamp</h3>
+    <p>Responsive Visual Design</p>
     <h3>General Assembly</h3>
     <p>User Experience</p>
 </div>
-<div id="FCC" class="asideContent">
-    <h3>freeCodeCamp</h3>
-    <p>Responsive Visual Design</p>
 </div>
 <!--Reference to Vertical Tab-->
 <!--<div class="aside">
@@ -403,7 +394,7 @@ section {
 </div>
 </div>-->
 <!--Create an additional aside box on the right size of the page to include one or more call out quotes about you-->
-<div class="footer">
+<div class="footer col-11">
 <!--Change the footer to "References available upon request"-->
 <p>References available upon <a href="#">request</a></p>
 </div>
@@ -426,19 +417,19 @@ section {
         } else {
         mobileNav.classList.remove("sticky");
   }
-}   //Add aside content to be hidden until clicked
+}   
+
+//Add aside content to be hidden until clicked
     function openEducation(evt, educationName) {
-        var i, asideContent, asideLinks;
+    // Declare all variables
+    var i, asideContent, asideLinks;
 
-        tabcontent = document.getElementsByClassName("asideContent";
+    // Get all elements with class="tabcontent" and hide them
+    asideContent = document.getElementsByClassName("asideContent");
         for (i = 0; i < asideContent.length; i++) {
-            asideContent[i].style.display="none";
+            asideContent[i].style.display = "none";
         }
-        document.getElementById(educationName).style.display = "block";
-        evt.currentTarget.className += "active";
-    }
-</script>
-
+    document.getElementById("defaultOpen").click();
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d01d052b64fa919"></script>
 
