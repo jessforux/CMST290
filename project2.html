@@ -37,25 +37,28 @@ html {
 .menu {
     width: 100%;
 }
-.menu ul {
+.nav {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 /*Change the padding of the navigation menu*/
-.menu ul li {
-    padding: 20px 20px 20px 20px;
+.nav li {
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
     background-color :#33b5e5;
     color: #ffffff;
     text-align: center;
     display: inline-block;
 }
-.menu li:hover {
+.nav li:hover {
     background-color: #0099cc; 
 }
-.menu li a {
+.nav li a {
     text-decoration: none;
+    display: block;
 }
+
 /*Change the font size of the text in the aside box*/
 .aside {
     float: left;
@@ -79,29 +82,18 @@ html {
     background-color: #ddd;
 }
 .asideContent {
+    display: none;
     float: left;
     padding: 0px 12px;
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
     height: 350px;
- 
-}
-
-.asideLeft {
-    float: left;
-    background-color: #33b5e5;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 11px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 section {
     font-size: 150%;
     background-color: #78C0E0;
     padding: 10px 20px 20px 20px;
- 
 }
 .container {
     display: grid;
@@ -277,7 +269,17 @@ section {
 <!--Add a responsive image-->
 <img id="headerIcon"src="img/Group 3.svg"/>
 </div>
-
+<!--Desktop NavBar-->
+<div class="menu">
+        <ul class="nav">
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#caseStudy">Case Study</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#giveBack">Give Back</a></li>
+        <li><a href="#findMe">Find Me</a></li>
+        <li><a href="#connect">Connect</a></li>
+    </ul>
+</div>
 
 <!--Add a short career objective-->
 <!--Mobile NavBar-->
@@ -291,25 +293,12 @@ section {
      <!--Connect-->
     <a href=""><i class="fa fa-comments fa-2x"></i></a>
 </div>
-<!--Desktop NavBar-->
+
 <!--6 to 8 sections-->
 <div class="row">
     <!--Remove row reference for horizontal navBar-->
-    <div class="menu">
-        <ul class="nav">
-        <li>About Me</li>
-        <li>Case Study</li>
-        <li>Skills & Languages</li>
-        <li>Give Back</li>
-        <li>Find Me</li>
-        <li>Connect</li>
-</ul>
-
-</div>
-
 <div class="col-6">
     <section id="aboutMe">
-
     <h2 style="line-height:1.5; letter-spacing:-1pt;">To design is to slay problems with a slice of solution.</h2>
     <h1 style="line-height:1;">Nice to meet you, I'm Jess!<br></h1><br>
 
@@ -344,6 +333,9 @@ section {
         </div>
         </div>
     </section>
+    <section id="skills">
+        <!--Incorporate Icons-->
+    </section>
     <section id="giveBack">
         <div>
         <div class="container">
@@ -353,11 +345,20 @@ section {
         </div>
         </div>
     </section>
+    <section id="findMe">
+        <div style="width:100%; text-align:center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198418.76334099207!2d-77.15758738102426!3d39.00862519919404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf4e666ae927%3A0x8433a865b29adf!2sSilver+Spring%2C+MD!5e0!3m2!1sen!2sus!4v1561136696746!5m2!1sen!2sus" width="50%" height="50%" frameborder="0" style="text-align:center; border:0" allowfullscreen></iframe>
+        </div>
+    </section>
     <section id="connectMe">
         <div style="width:100%; text-align:center;">
         <a href="mailto:jessofux@gmail.com">
             <button class="button button1">Let's Connect</button>
         </a>
+        </div>
+        <div class="footer">
+            <!--Change the footer to "References available upon request"-->
+            <p>References available upon <a href="#">request</a></p>
         </div>
     </section>
 </div>
@@ -366,10 +367,10 @@ section {
 <!--Add at least three degrees in the aside box on the right side-->
 <!--Include high school to fill in the area if you have less than 2 degrees-->
 <div class="aside">
-    <button class="asideLinks" onclick="openEducation(event, 'education')">
+    <button class="asideLinks" onclick="openEducation(event, 'getEducation')">
         <i class="fa fa-graduation-cap fa-2x"></i></button>
 </div>
-<div id="edu" class="asideContent">
+<div id="getEducation" class="asideContent">
     <h3>UMUC</h3>
     <p>Bachelors of Science</p>
     <h3>freeCodeCamp</h3>
@@ -394,10 +395,6 @@ section {
 </div>
 </div>-->
 <!--Create an additional aside box on the right size of the page to include one or more call out quotes about you-->
-<div class="footer col-11">
-<!--Change the footer to "References available upon request"-->
-<p>References available upon <a href="#">request</a></p>
-</div>
 </body>
 <script>
     //Create a code that will use if/else conditions to define different menu for mobile and desktop
@@ -420,18 +417,20 @@ section {
 }   
 
 //Add aside content to be hidden until clicked
-    function openEducation(evt, educationName) {
-    // Declare all variables
-    var i, asideContent, asideLinks;
+function openEducation(evt, education) {
+  var i, asideContent, asideLinks;
+  asideContent = document.getElementsByClassName("asideContent");
+  for (i = 0; i < asideContent.length; i++) {
+    asideContent[i].style.display = "none";
+  }
+  asideLinks = document.getElementsByClassName("asideLinks");
+  for (i = 0; i < asideLinks.length; i++) {
+    asideLinks[i].className = asideLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(education).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
-    // Get all elements with class="tabcontent" and hide them
-    asideContent = document.getElementsByClassName("asideContent");
-        for (i = 0; i < asideContent.length; i++) {
-            asideContent[i].style.display = "none";
-        }
-    document.getElementById("defaultOpen").click();
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d01d052b64fa919"></script>
-
-
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </html>
