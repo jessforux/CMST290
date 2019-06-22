@@ -20,7 +20,7 @@ html {
 }
 /*Change the background-color from #99933cc*/
 .header {
-    background-color #fff;
+    background-color: #fff;
     color: #000;
     padding: 30px;
     font-size: 0.5rem;
@@ -41,12 +41,13 @@ html {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    background-color:#001484;
 }
 /*Change the padding of the navigation menu*/
 .nav li {
-    padding: 10px 10px 10px 10px;
+    padding: 15px;
     margin: 0px;
-    background-color :#33b5e5;
+    
     color: #ffffff;
     text-align: center;
     display: inline-block;
@@ -55,6 +56,7 @@ html {
     background-color: #0099cc; 
 }
 .nav li a {
+    color: white;
     text-decoration: none;
     display: block;
 }
@@ -68,6 +70,9 @@ html {
     text-align: center;
     font-size: 11px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.asideContent {
+    display: none;
 }
 section {
     font-size: 120%;
@@ -126,8 +131,6 @@ section {
         color:#001484;
         text-shadow: 0 0 5px rgba(0,0,0,0.85);
     }
-
-
 .button {
         background-color:#33b5e5;
         border: none;
@@ -151,15 +154,14 @@ section {
     .button1:hover {
         background-color: #33b5e5;
         color: #fff;
-    }
-
-  
+    }  
     .footer {
-    background-color: #0099cc;
-    color: #ffffff;
+    color: #000;
     text-align: center;
     font-size: 12px;
     padding: 15px;
+    margin-top: 100px;
+    margin-bottom: 0px;
     }
 /* For desktop: */
 /*Change the breakpoint for the desktop version by at least 10 pixels in either direction*/
@@ -185,7 +187,9 @@ section {
     }
     body {
         font-size: 80%;
-        background-color: slategray;
+    }
+    a {
+        color:#197278;
     }
     #headerIcon {
     padding-left: 15rem;
@@ -201,7 +205,6 @@ section {
         list-style: none;
         display: inline;
         overflow: hidden;
-        width: 100%;
         background-color: white;
     }
 
@@ -260,7 +263,7 @@ section {
         <li><a href="#skills">Skills</a></li>
         <li><a href="#giveBack">Give Back</a></li>
         <li><a href="#findMe">Find Me</a></li>
-        <li><a href="#connect">Connect</a></li>
+        <li><a href="#connectMe">Connect</a></li>
     </ul>
 </div>
 
@@ -268,21 +271,21 @@ section {
 <!--Mobile NavBar-->
 <div style="width:100%; text-align:center;" id="mobileNav">
     <!--About Me add under image -->
-    <a href="#aboutMe">About <i class="fa fa-female fa-2x"></i></a>
+    <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
     <!--Case Study -->
     <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i> 
-    Study</a>
+    </a>
     <!--Give Back-->
-    <a href="">Give <i class="fa fa-heart fa-2x"></i></i></a>
+    <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
      <!--Connect-->
-    <a href=""><i class="fa fa-comments fa-2x"></i> Connect</a>
+    <a href=""><i class="fa fa-comments fa-2x"></i> </a>
 </div>
 
 <!--6 to 8 sections-->
 <div class="row">
     <!--Remove row reference for horizontal navBar-->
-<div class="col-6">
-    <section id="aboutMe">
+<div class="col-12">
+    <section id="land">
     <h2 style="line-height:1.5; letter-spacing:-1pt;">
         To design is to slay problems with a slice of solution.</h2>
     <p>I am your user-friendly visual designer creating blueprints
@@ -290,20 +293,29 @@ section {
     <p>I use basic HTML, CSS and JavaScript to develop dynamic interactions.</p> 
     <p> Find me: <a href="#">here</a>.</p>
     <h2>Nice to meet you, I'm Jess 👋</h2><br>
+    </section>
+    
+    
     <p style="font-size:40px; text-align: center;">⬇</p><br>
+    
+    
+    <section id="aboutMe">
     <h3>People are my passion.</h3>
     <p>For that past 5 years I've worked in retail banking industry 
         managing meaningful conversations with clients to find solutions 
-        to their financial needs. I study psychology. 
-        My personal projects surround volunteer support. 
+        to their financial needs</p>
+    <p>I study psychology. <p>
+    <p>My passion projects surround community development. 
         I am proud to work with over 800+ volunteers to support over 10+ local 
         nonprofit organizations.  Shoutout to the most recent event with Nourish Now. 
         Fight food hunger and eliminate food waste with them <a href="#">here.</a></p>
     </section>
+
+    <p style="font-size:40px; text-align: center;">⬇</p><br>
+
     <section id="caseStudy"> 
-    <!--I serve visual stories using people-focused research
-        I build code-based content using accessible interfaces-->
         <div style="width:100%;">
+                <h3>I serve visual stories using people-focused research</h3>
         <div class="container">
             <div class="cell cell-m">1.</div>
             <div class="cell cell-l">2.</div>
@@ -316,10 +328,27 @@ section {
         </div>
         </div>
     </section>
+
     <section id="skills">
+            <p style="font-size:40px; text-align: center;">⬇</p><br>
         <!--Incorporate Icons-->
+        <div style="width:100%;">
+                <h3>I build code-based content using accessible interfaces</h3>
+            <div class="container">
+                
+                    <div class="cell cell-m">1.</div>
+                    <div class="cell cell-l">2.</div>
+                    <div class="cell cell-m">3.</div>
+                    <div class="cell cell-s">4.</div>
+                    <div class="cell cell-t">5.</div>
+                    <div class="cell cell-w">6.</div>
+                    <div class="cell cell-m">7.</div>
+                    <div class="cell cell-w">8.</div>
+            </div>
+        </div>
     </section>
     <section id="giveBack">
+        <p style="font-size:40px; text-align: center;">⬇</p><br>
         <div>
         <div class="container">
             <div class="cell cell-m">7.</div>
@@ -329,9 +358,10 @@ section {
         </div>
         </div>
     </section>
-
+    <p style="font-size:40px; text-align: center;">⬇</p><br>
     <section id="findMe">
          <div style="width:100%; text-align:center;">
+        <h2>Local to Silver Spring, Maryland</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198418.76334099207!2d-77.15758738102426!3d39.00862519919404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf4e666ae927%3A0x8433a865b29adf!2sSilver+Spring%2C+MD!5e0!3m2!1sen!2sus!4v1561136696746!5m2!1sen!2sus" width="50%" height="50%" frameborder="0" style="text-align:center; border:0" allowfullscreen></iframe>
         </div></section>
     <section id="connectMe">
@@ -339,10 +369,12 @@ section {
         <a href="mailto:jessofux@gmail.com">
             <button class="button button1">Let's Connect</button>
         </a>
-        </div>
         <div class="footer">
-            <!--Change the footer to "References available upon request"-->
-            <p>References available upon <a href="#">request</a></p>
+                <a href="#land" style="text-decoration:none; font-size:40px; text-align: center;">⬆</a>
+                <br>
+                <!--Change the footer to "References available upon request"-->
+                <p>References available upon <a href="#">request</a></p>
+            </div>
         </div>
     </section>
 </div>
@@ -362,22 +394,7 @@ section {
     <h3>General Assembly</h3>
     <p>User Experience</p>
 </div>
-</div>
-<!--Reference to Vertical Tab-->
-<!--<div class="aside">
-<h2>Bachelor of Science: Psychology</h2>
-<p>University of Maryland, University College</p>
 
-<h2>User Experience</h2>
-<p>General Assembly</p>
-
-<h2>Responsive Visual Design</h2>
-<p>freeCodeCamp</p>
-</div>
-
-
-</div>
-</div>-->
 <!--Create an additional aside box on the right size of the page to include one or more call out quotes about you-->
 </body>
 <script>
@@ -417,4 +434,5 @@ function openEducation(evt, education) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+</script>
 </html>
