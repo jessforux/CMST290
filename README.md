@@ -27,14 +27,14 @@ MILESTONE 3 3: ---<br>
   <li>✔ Change the navigation to sections you would find on a resume (6-8 sections of your choice).  Education, Skills, Awards, Publications, Organizations are some examples of resume sections.</li>
   <li>✔ Add a short career objective.</li>
   <li>✔ Add at least three degrees in the aside box on the right side of the page. Include high school to fill in the area if you have less than 2 degrees.</li>
-  <li>vChange the breakpoint for the desktop version by at least 10 pixels in either direction.</li>
+  <li>✔Change the breakpoint for the desktop version by at least 10 pixels in either direction.</li>
   <li>✔Add a Media Query to set an initial background color and change it a different color when it reaches the desktop breakpoint you just changed in #7.</li>
   <li>✔ Change the padding of the navigation menu.</li>
   <li>✔ Change the font size of the text in the aside box.</li>
   <h2>Advanced Challenge</h2>
   <li>✔ Add a responsive image (graphic or photograph)</li>
   <li>Create an additional aside box on the right side of the page to include one or more call out quotes about you (e.g. "Works very hard!" --Former Boss)</li><br>
-MILESTONE 1: ---<br>
+MILESTONE 1: <a href="https://jessforux.github.io/CMST290/project2">07/05/2019</a><br>
 MILESTONE 2: ---<br>
 MILESTONE 3: ---<br>
 <p>References: N/A</p>
