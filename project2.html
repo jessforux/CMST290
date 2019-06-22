@@ -61,63 +61,72 @@ html {
 
 /*Change the font size of the text in the aside box*/
 .aside {
-    float: left;
-    background-color: #f1f1f1;
-    height: 30px;
-    width: 70px;
-}
-.aside button {
-    display: block;
-    background-color: inherit;
-    color: #000;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.aside button:hover {
-    background-color: #ddd;
-}
-.asideContent {
     display: none;
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-    border-left: none;
-    height: 350px;
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 11px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 section {
-    font-size: 150%;
-    background-color: #78C0E0;
-    padding: 10px 20px 20px 20px;
+    font-size: 120%;
+    padding: 20px 20px 100px 20px;
+    background-color:#EDDDD4;
 }
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px 5px;
-    height: 70vh;
-    width: 90%;
-    margin: 10px 10px 0px 20px;
 }
 .cell {
     color: white;
     font-size: 3rem;
-    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: top left;
+    transition: all ease-in-out 300ms;
+    position: relative;
+    z-index: 10;
 }
-.cell-1 {
-    background:#33b5e5; 
-}
-.cell-2 {
-    background:#33b5e5; 
-}
-.cell-3 {
-    background:#33b5e5; 
-}
+
+.cell-s {
+    grid-row: span 1;
+    grid-column: span 1; 
+    background-color: #197278;
+    }
+.cell-m {
+    background:#33b5e5;
+    grid-row: span 2;
+    grid-column: span 2 
+    }
+.cell-l {
+    grid-row: span 3;
+    grid-column: span 3;
+    background-color:#708090;
+    }
+.cell-t {
+    grid-row: span 3;
+    grid-column: span 2; 
+    background-color: white;  
+    }
+.cell-w {
+    background-color: #000;
+    grid-row: span 2;
+    grid-column: span 3;
+    }
+.cell:hover {
+        color:#001484;
+        text-shadow: 0 0 5px rgba(0,0,0,0.85);
+    }
+
 
 .button {
         background-color:#33b5e5;
@@ -168,7 +177,7 @@ section {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 758px) {
+@media only screen and (max-width: 600px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
@@ -185,6 +194,7 @@ section {
         display:none;
     }
     #mobileNav {
+        z-index: 11;
         margin: 0;
         padding: 0;
         text-align: center;
@@ -192,20 +202,19 @@ section {
         display: inline;
         overflow: hidden;
         width: 100%;
+        background-color: white;
     }
 
     #mobileNav a {
         width: 25%;
-        background:#33b5e5;
-        color: #fff;
+        color: #001484;
         float: left;
         display: block;
         padding: 20px;
         text-decoration: none;
     }
     #mobileNav a:hover {
-    background-color: #fff;
-    color: #33b5e5;
+    border-bottom: 3px solid #708090;
     }
     .sticky {
         position: fixed;
@@ -220,44 +229,18 @@ section {
     }
     .container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 2.5px 2.5px;
-    height: 70vh;
-    width: 90%;
+    height: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5.5px 5.5px;
  
     }
     section {
-        background-color: #fff;
-        margin: 0 20px 250px 20px;
+        margin: 0 20px 200px 20px;
+        background-color: #001484;
+        color: white;
+
     }
-/*
-.userOption {
-    font-size: 20px;
-    padding: 10px 8px 10px 14px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-}
-
-.userOption .select {
-    width: 120%;
-}
-
-.userOption .select select{
-    background: transparent;
-    line-height: 1;
-    border: 0;
-    padding: 0;
-    border-radius: 0;
-    width: 120%;
-    position: relative;
-    z-index: 10;
-    font-size: 1em;
-}
-*/
 }
 </style>
 <script src="https://use.fontawesome.com/32c1965958.js"></script>
@@ -285,13 +268,14 @@ section {
 <!--Mobile NavBar-->
 <div style="width:100%; text-align:center;" id="mobileNav">
     <!--About Me add under image -->
-    <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
+    <a href="#aboutMe">About <i class="fa fa-female fa-2x"></i></a>
     <!--Case Study -->
-    <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i></a>
+    <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i> 
+    Study</a>
     <!--Give Back-->
-    <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
+    <a href="">Give <i class="fa fa-heart fa-2x"></i></i></a>
      <!--Connect-->
-    <a href=""><i class="fa fa-comments fa-2x"></i></a>
+    <a href=""><i class="fa fa-comments fa-2x"></i> Connect</a>
 </div>
 
 <!--6 to 8 sections-->
@@ -299,37 +283,36 @@ section {
     <!--Remove row reference for horizontal navBar-->
 <div class="col-6">
     <section id="aboutMe">
-    <h2 style="line-height:1.5; letter-spacing:-1pt;">To design is to slay problems with a slice of solution.</h2>
-    <h1 style="line-height:1;">Nice to meet you, I'm Jess!<br></h1><br>
-
-<!--Removed Concept: Drop Down Menu
-<div class="timeline">
-    <div class="container left">
-        <div class="content">
-            <h2>2019</h2>
-            <p>Lorem ipsum</p>
-        </div>
-    </div>
-    <div class="container right">
-            <div class="content">
-                <h2>2019</h2>
-                <p>Lorem ipsum</p>
-            </div>
-        </div>
-</div>-->
-
+    <h2 style="line-height:1.5; letter-spacing:-1pt;">
+        To design is to slay problems with a slice of solution.</h2>
+    <p>I am your user-friendly visual designer creating blueprints
+        for delightful experiences for people.</p>
+    <p>I use basic HTML, CSS and JavaScript to develop dynamic interactions.</p> 
+    <p> Find me: <a href="#">here</a>.</p>
+    <h2>Nice to meet you, I'm Jess 👋</h2><br>
+    <p style="font-size:40px; text-align: center;">⬇</p><br>
+    <h3>People are my passion.</h3>
+    <p>For that past 5 years I've worked in retail banking industry 
+        managing meaningful conversations with clients to find solutions 
+        to their financial needs. I study psychology. 
+        My personal projects surround volunteer support. 
+        I am proud to work with over 800+ volunteers to support over 10+ local 
+        nonprofit organizations.  Shoutout to the most recent event with Nourish Now. 
+        Fight food hunger and eliminate food waste with them <a href="#">here.</a></p>
     </section>
     <section id="caseStudy"> 
     <!--I serve visual stories using people-focused research
         I build code-based content using accessible interfaces-->
         <div style="width:100%;">
         <div class="container">
-            <div class="cell cell-1">1.</div>
-            <div class="cell cell-2">2.</div>
-            <div class="cell cell-3">3.</div>
-            <div class="cell cell-1">4.</div>
-            <div class="cell cell-2">5.</div>
-            <div class="cell cell-3">6.</div>
+            <div class="cell cell-m">1.</div>
+            <div class="cell cell-l">2.</div>
+            <div class="cell cell-m">3.</div>
+            <div class="cell cell-s">4.</div>
+            <div class="cell cell-t">5.</div>
+            <div class="cell cell-w">6.</div>
+            <div class="cell cell-m">7.</div>
+            <div class="cell cell-w">8.</div>
         </div>
         </div>
     </section>
@@ -339,17 +322,18 @@ section {
     <section id="giveBack">
         <div>
         <div class="container">
-            <div class="cell cell-1">7.</div>
-            <div class="cell cell-2">8.</div>
-            <div class="cell cell-3">9.</div> 
+            <div class="cell cell-m">7.</div>
+            <div class="cell cell-w">8.</div>
+            <div class="cell cell-w">9.</div>
+            <div class="cell cell-t">10.</div> 
         </div>
         </div>
     </section>
+
     <section id="findMe">
-        <div style="width:100%; text-align:center;">
+         <div style="width:100%; text-align:center;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198418.76334099207!2d-77.15758738102426!3d39.00862519919404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf4e666ae927%3A0x8433a865b29adf!2sSilver+Spring%2C+MD!5e0!3m2!1sen!2sus!4v1561136696746!5m2!1sen!2sus" width="50%" height="50%" frameborder="0" style="text-align:center; border:0" allowfullscreen></iframe>
-        </div>
-    </section>
+        </div></section>
     <section id="connectMe">
         <div style="width:100%; text-align:center;">
         <a href="mailto:jessofux@gmail.com">
