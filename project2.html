@@ -45,7 +45,7 @@ html {
 }
 /*Change the padding of the navigation menu*/
 .nav li {
-    padding: 20px;
+    padding: 15px;
     margin: 0px;
     
     color: #ffffff;
@@ -131,8 +131,6 @@ section {
         color:#001484;
         text-shadow: 0 0 5px rgba(0,0,0,0.85);
     }
-
-
 .button {
         background-color:#33b5e5;
         border: none;
@@ -158,11 +156,12 @@ section {
         color: #fff;
     }  
     .footer {
-    background-color: #0099cc;
-    color: #ffffff;
+    color: #000;
     text-align: center;
     font-size: 12px;
     padding: 15px;
+    margin-top: 100px;
+    margin-bottom: 0px;
     }
 /* For desktop: */
 /*Change the breakpoint for the desktop version by at least 10 pixels in either direction*/
@@ -264,7 +263,7 @@ section {
         <li><a href="#skills">Skills</a></li>
         <li><a href="#giveBack">Give Back</a></li>
         <li><a href="#findMe">Find Me</a></li>
-        <li><a href="#connect">Connect</a></li>
+        <li><a href="#connectMe">Connect</a></li>
     </ul>
 </div>
 
@@ -272,14 +271,14 @@ section {
 <!--Mobile NavBar-->
 <div style="width:100%; text-align:center;" id="mobileNav">
     <!--About Me add under image -->
-    <a href="#aboutMe">About <i class="fa fa-female fa-2x"></i></a>
+    <a href="#aboutMe"><i class="fa fa-female fa-2x"></i></a>
     <!--Case Study -->
     <a href="#caseStudy"><i class="fa fa-folder fa-2x"></i> 
-    Study</a>
+    </a>
     <!--Give Back-->
-    <a href="">Give <i class="fa fa-heart fa-2x"></i></i></a>
+    <a href=""><i class="fa fa-heart fa-2x"></i></i></a>
      <!--Connect-->
-    <a href=""><i class="fa fa-comments fa-2x"></i> Connect</a>
+    <a href=""><i class="fa fa-comments fa-2x"></i> </a>
 </div>
 
 <!--6 to 8 sections-->
@@ -295,10 +294,12 @@ section {
     <p> Find me: <a href="#">here</a>.</p>
     <h2>Nice to meet you, I'm Jess 👋</h2><br>
     </section>
-
-
-    <section id="aboutMe">
+    
+    
     <p style="font-size:40px; text-align: center;">⬇</p><br>
+    
+    
+    <section id="aboutMe">
     <h3>People are my passion.</h3>
     <p>For that past 5 years I've worked in retail banking industry 
         managing meaningful conversations with clients to find solutions 
@@ -310,6 +311,7 @@ section {
         Fight food hunger and eliminate food waste with them <a href="#">here.</a></p>
     </section>
 
+    <p style="font-size:40px; text-align: center;">⬇</p><br>
 
     <section id="caseStudy"> 
         <div style="width:100%;">
@@ -328,6 +330,7 @@ section {
     </section>
 
     <section id="skills">
+            <p style="font-size:40px; text-align: center;">⬇</p><br>
         <!--Incorporate Icons-->
         <div style="width:100%;">
                 <h3>I build code-based content using accessible interfaces</h3>
@@ -345,6 +348,7 @@ section {
         </div>
     </section>
     <section id="giveBack">
+        <p style="font-size:40px; text-align: center;">⬇</p><br>
         <div>
         <div class="container">
             <div class="cell cell-m">7.</div>
@@ -354,7 +358,7 @@ section {
         </div>
         </div>
     </section>
-
+    <p style="font-size:40px; text-align: center;">⬇</p><br>
     <section id="findMe">
          <div style="width:100%; text-align:center;">
         <h2>Local to Silver Spring, Maryland</h2>
@@ -365,6 +369,12 @@ section {
         <a href="mailto:jessofux@gmail.com">
             <button class="button button1">Let's Connect</button>
         </a>
+        <div class="footer">
+                <a href="#land" style="font-size:40px; text-align: center;">⬆</a>
+                <br>
+                <!--Change the footer to "References available upon request"-->
+                <p>References available upon <a href="#">request</a></p>
+            </div>
         </div>
     </section>
 </div>
@@ -384,10 +394,7 @@ section {
     <h3>General Assembly</h3>
     <p>User Experience</p>
 </div>
-<div class="col-11 footer">
-        <!--Change the footer to "References available upon request"-->
-        <p>References available upon <a href="#">request</a></p>
-    </div>
+
 <!--Create an additional aside box on the right size of the page to include one or more call out quotes about you-->
 </body>
 <script>
