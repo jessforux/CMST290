@@ -22,7 +22,7 @@ html {
 /*Change the background-color from #99933cc*/
 .header {
     display: grid;
-    grid-template-columns: 70% 1fr;
+    grid-template-columns: 50% 1fr;
     align-content: center;
     padding: 20px;
   
@@ -30,11 +30,14 @@ html {
     font-size: 20px;
     color: #fff;
 }
-#headerIcon {
+#logo1 {
     align-self: flex-end;
     justify-content: flex-end;
     height: 100%;
     width: 100%;
+}
+#logo2 {
+    display: none;
 }
 /*Remove visability of mobileNav*/
 #mobileNav {
@@ -193,15 +196,22 @@ section {
     }
     body {
         font-size: 80%;
+        background-color: #fff;
     }
     a {
         color:#197278;
     }
-    #headerIcon {
-    padding-left: 15rem;
-    }
     .nav {
         display:none;
+    }
+    #logo1 {
+        display: none;
+    }
+    #logo2 {
+        align-self: flex-end;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
     }
     #mobileNav {
         z-index: 11;
@@ -259,7 +269,8 @@ section {
 <!--Add first and last name to the header-->
 <h1>Jessica Hoang</h1>
 <!--Add a responsive image-->
-<img id="headerIcon"src="img/jlogo.svg"/>
+<img id="logo1"src="img/jlogo.svg"/>
+<img id="logo2"src="img/jlogo2.svg"/>
 </div>
 <!--Desktop NavBar-->
 <div class="menu">
@@ -290,7 +301,7 @@ section {
 <!--6 to 8 sections-->
 <div class="row">
     <!--Remove row reference for horizontal navBar-->
-<div class="col-12">
+<div class="col-10">
     <section id="land">
     <h2 style="line-height:1.5; letter-spacing:-1pt;">
         To design is to slay problems with a slice of solution.</h2>
