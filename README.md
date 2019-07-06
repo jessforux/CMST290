@@ -34,7 +34,7 @@ MILESTONE 3 3: ---<br>
   <h2>Advanced Challenge</h2>
   <li>✔ Add a responsive image (graphic or photograph)</li>
   <li>Create an additional aside box on the right side of the page to include one or more call out quotes about you (e.g. "Works very hard!" --Former Boss)</li><br>
-MILESTONE 1: ---<br>
+MILESTONE 1: <a href="https://jessforux.github.io/CMST290/project2">06/28/2019</a><br>
 MILESTONE 2: ---<br>
 MILESTONE 3: ---<br>
 <p>References: N/A</p>
